@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_editor">#111315</color>
+    <color name="top_bar">#181B1E</color>
+    <color name="gutter">#0D0F10</color>
+    <color name="primary_mint">#65E6B3</color>
+    <color name="normal_text">#E8ECEA</color>
+    <color name="comments">#78857F</color>
+    <color name="output_bg">#0B0D0E</color>
+    <color name="popup_bg">#1C2023</color>
+    <color name="borders">#292F2D</color>
+    <color name="cursor">#65E6B3</color>
+    <color name="error">#FF5C5C</color>
+    <color name="warning">#FFC857</color>
+    <color name="success">#58D68D</color>
+</resources>

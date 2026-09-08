@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PythEditor" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/top_bar</item>
+        <item name="android:navigationBarColor">@color/top_bar</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

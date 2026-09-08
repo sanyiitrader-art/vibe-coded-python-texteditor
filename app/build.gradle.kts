@@ -1,0 +1,70 @@
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.chaquo.python")
+}
+
+android {
+    namespace = "com.pyth.editor"
+    compileSdk = 34
+
+    defaultConfig {
+        applicationId = "com.pyth.editor"
+        minSdk = 26
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+
+        ndk {
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+        }
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+    
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.3"
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+python {
+    version = "3.10"
+    pip {
+        install("six")
+    }
+}
+
+dependencies {
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    
+    // Jetpack Compose
+    implementation(platform("androidx.compose:compose-bom:2024.02.00"))
+    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material-icons-extended")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+}
